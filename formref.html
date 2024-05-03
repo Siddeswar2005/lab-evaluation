@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            LEVEL PRO FORMS
+        </title>
+    </head>
+    <body>
+        <main>
+             <h3>Please enter your details</h3>
+               <form action="/action.php">
+                <input type="text" placeholder="user name">
+                <!--pasword is not vissible-->
+                <input type="password" placeholder="password"><br>
+               </form>
+             <h3>Please select your class</h3>
+                 <form action="/action.php">
+                    <!---radio,check box gives an action for chossing correct option-->
+                <input type="radio" value="class 11"name="class" id="101">class 11<br>
+                <input type="radio" value="class 12 "name="class"id="102">class 12
+             </form>
+               <div iD="id1"class="group 1"></div>
+               <div iD="id2"class="group 2"></div>
+             <h3>Select your Fav subjects</h3>
+              <!---labels can be used opt for options-->
+             <label for="math">
+                  <input type="checkbox"  value="maths"name="subject"id="101">Maths
+              </label><br>
+              <label for="phy">
+                <input type="checkbox"  value="physics"name="subject"id="102">physics
+              </label><br><br>
+              <!---to write an feedback and subission-->
+              <textarea name="feedback" id="101"placeholder="Please give your valuable feedback"rows="5"columns="5"></textarea><br>
+              <h3>Select Your city</h3>
+              <select name="city"id="city">
+               <option value="delhi">delhi</opyion>
+                <option value="Amritsar">Amritsar</option>
+                <option value="Hyderabad">Hyderabad</option>
+            </select>
+            <Br>
+                <h3>VISIT OUR YOUTUBE CHANNEL</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/HcOc7P5BMi4?si=o_l-i6abDUpL0FpJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </main>
+    </body>
+</html>

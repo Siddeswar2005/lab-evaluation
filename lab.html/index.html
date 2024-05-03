@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tables from 2 to 20</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+   h1 {
+        text-align: center;
+        color:darkred
+    }
+    table {
+        width: 30%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        transition: transform 0.2s;
+    }
+    table:hover {
+        transform: scale(0.8);
+    }
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+    }
+    th {
+        background-color: #693030;
+        color:#000000
+    }
+    td:nth-child(1) {
+        background-color:  #693030;
+        color: white;
+    }
+    td:nth-child(2) {
+        background-color: #fae475;
+        color: rgb(0, 0, 0);
+    }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Tables from 2 to 20</h1>
+  <div id="tables"></div>
+</div>
+<script>
+  const tablesContainer = document.getElementById('tables');
+  for (let i = 2; i <= 20; i++) {
+    let table = document.createElement('table');
+    table.classList.add('table', `table-${i}`);
+    let tableHead = table.createTHead();
+    let headRow = tableHead.insertRow();
+    let headCell = headRow.insertCell();
+    headCell.colSpan = 2;
+    headCell.textContent = `Table ${i}`;
+    let tableBody = table.createTBody();
+    for (let j = 1; j <= 10; j++) {
+      let row = tableBody.insertRow();
+      let cell1 = row.insertCell();
+      let cell2 = row.insertCell();
+      cell1.textContent = `${i} x ${j}`;
+      cell2.textContent = i * j;
+    }
+    tablesContainer.appendChild(table);
+  }
+</script>
+</body>
+</html>
